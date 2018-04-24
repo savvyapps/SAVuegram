@@ -1,0 +1,334 @@
+// navigation
+header {
+    position: relative;
+    background: $white;
+    box-shadow: 0 0 5px 0 rgba($dark, 0.5);
+    z-index: 10;
+
+    h3 {
+        display: inline-block;
+    }
+
+    ul {
+        float: right;
+        text-align: right;
+
+        li {
+            margin-top: 4px;
+            margin-left: 6px;
+            a {
+                display: block;
+                padding: 5px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 742px) {
+        h3 {
+            display: block;
+            text-align: center;
+        }
+        ul {
+            float: none;
+            text-align: center;
+        }
+    }
+}
+
+// login
+#login {
+    background: linear-gradient(to right, $primary 0%, $primary 50%, $white 50%, $white 100%);
+
+    @media screen and (max-width: 742px) {
+        height: 100vh;
+        background: $white;
+    }
+
+    .col1,
+    .col2 {
+        height: 100vh;
+        padding-top: 30vh;
+
+        @media screen and (max-width: 742px) {
+            height: auto;
+            padding-top: 20vh;
+        }
+    }
+    .col1 {
+        color: $white;
+        @media screen and (max-width: 742px) {
+            display: none;
+        }
+
+        p {
+            max-width: 490px;
+            margin-top: 2rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
+    .signup-form {
+        padding-top: 20vh;
+
+        @media screen and (max-width: 742px) {
+            padding-top: 10vh;
+        }
+    }
+    .col2 {
+        h1 {
+            margin-bottom: 2rem;
+        }
+        form {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .extras {
+            float: right;
+            text-align: right;
+            a {
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        .password-reset {
+            h1 {
+                margin-bottom: 1rem;
+            }
+            p {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
+
+// dashboard
+#dashboard {
+    section {
+        padding: 2rem 0;
+    }
+
+    .col1 {
+        flex: 0 0 30%;
+        @media screen and (max-width: 1000px) {
+    		flex: 0 0 40%;
+    	}
+    }
+    .profile {
+        background: $white;
+        padding: 2rem;
+
+        h5 {
+
+        }
+
+        p {
+            color: $medium;
+            margin-bottom: 1rem;
+        }
+    }
+    .create-post {
+        p {
+            margin-bottom: 0.5rem;
+        }
+        textarea {
+            height: 200px;
+            margin: 0;
+        }
+        .button {
+            margin-top: 1rem;
+            width: 100%;
+            z-index: 5;
+            border-radius: 0 0 3px 3px;
+        }
+    }
+    .hidden-posts {
+        text-align: center;
+        border: 1px solid #e6ecf0;
+        font-size: 14px;
+        border-bottom: 0;
+        background: $white;
+
+        &:hover {
+            background: #f5f8fa;
+            cursor: pointer;
+        }
+
+        .new-posts {
+            color: $primary;
+        }
+        p {
+            padding: 15px;
+            margin: 0 auto;
+            color: darken($light, 25%);
+        }
+    }
+    .post {
+        border: 1px solid #e6ecf0;
+        border-bottom: 0;
+        font-size: 14px;
+        padding: 1.5rem;
+        background: $white;
+
+        &:hover {
+            background: #f5f8fa;
+        }
+
+        &:last-of-type {
+            border-bottom: 1px solid $light;
+        }
+
+        h5 {
+            margin: 0 0 0.5rem;
+        }
+        span {
+            display: block;
+            font-style: italic;
+            font-size: 12px;
+            margin-bottom: 0.5rem;
+            color: darken($light, 25%);
+        }
+        p {
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            margin: 1rem 0 0;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                margin-right: 1rem;
+                font-size: 12px;
+            }
+        }
+    }
+    .no-results {
+        border: 1px solid #e6ecf0;
+        background: $white;
+        text-align: center;
+        padding: 100px 1rem;
+    }
+    .c-modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($dark, 0.4);
+        z-index: 999;
+
+        .c-container {
+            position: relative;
+            max-width: 600px;
+            margin: 30vh auto 0;
+            padding: 2rem;
+            border-radius: 3px;
+            background: $white;
+            box-shadow: 0 0 20px 0 rgba($dark, 0.5);
+
+            a {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                padding: 5px;
+            }
+            .button {
+                margin-top: 1rem;
+            }
+        }
+    }
+    .p-modal {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba($dark, 0.4);
+        z-index: 999;
+
+        .p-container {
+            position: fixed;
+            max-width: 600px;
+            top: 2vh;
+            bottom: 2vh;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 3px;
+            background: $white;
+            box-shadow: 0 0 20px 0 rgba($dark, 0.5);
+            overflow: auto;
+
+            .close {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+                padding: 5px;
+            }
+
+            .post {
+                border: 0;
+                border-bottom: 1px solid #e6ecf0;
+
+                &:hover {
+                    background: $white;
+                }
+            }
+
+            .comment {
+                font-size: 14px;
+                padding: 1.5rem;
+                border-top: 1px solid #e6ecf0;
+
+                &:first-of-type {
+                    border-top: 0;
+                }
+
+                h5 {
+                    margin: 0 0 0.5rem;
+                }
+                span {
+                    display: block;
+                    font-style: italic;
+                    font-size: 12px;
+                    margin-bottom: 0.5rem;
+                    color: darken($light, 20%);
+                }
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// settings
+#settings {
+    padding: 2rem 0;
+
+    .col1 {
+        max-width: 600px;
+        margin: 5vh auto 0;
+        background: $white;
+        padding: 2rem;
+    }
+
+    form {
+        margin-top: 3rem;
+    }
+
+    .success {
+        color: $success;
+        margin: 0.5rem 0 -2rem;
+    }
+
+    .button {
+        margin-top: 2rem;
+    }
+}
