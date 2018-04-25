@@ -57,7 +57,7 @@ export const store = new Vuex.Store({
             commit('setCurrentUser', null)
             commit('setUserProfile', {})
             commit('setPosts', null)
-            // commit('setHiddenPosts', null)
+            commit('setHiddenPosts', null)
         },
         fetchUserProfile({ commit, state }) {
             fb.usersCollection.doc(state.currentUser.uid).get().then(res => {
