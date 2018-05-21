@@ -26,7 +26,7 @@ npm install
 # start local server @ localhost:8080
 npm run dev
 ```
-### tutorial
+### Tutorial
 
 > For further instructions on building this project, [refer to our Vue.js tutorial](http://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase). You'll find it and many more resources on the [Savvy Apps blog](https://savvyapps.com/blog). Feel free to reach out to us with any questions or feedback via the [Savvy Apps website](https://savvyapps.com/), or connect with us on [Facebook](https://www.facebook.com/savvyapps/) and [Twitter](https://twitter.com/savvyapps).
 
