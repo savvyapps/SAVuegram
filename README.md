@@ -1,6 +1,6 @@
 # Vuegram
 
-> A simple social media web app built with Vue.js and Firebase's Cloud Firestore as a way to teach people how to build a real-world app using the two technologies. Follow along with our tutorial, [The Definitive Guide to Building a Web App With Vue.js and Firebase](http://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase), to learn core Vue.js concepts and build this project.
+> A simple social media web app built with Vue.js and Firebase's Cloud Firestore as a way to teach people how to build a real-world app using the two technologies. Follow along with our tutorial, [Building a Real-World Web App With Vue.js and Firebase](http://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase), to learn core Vue.js concepts and build this project.
 
 ### Project Overview
 
