@@ -1,14 +1,14 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
 
-// firebase init
+// firebase init goes here
 const config = {
-	apiKey: "AIzaSyCM9MThtyQ5wnN0jT0qft3c6hOdqYgjKMY",
-	authDomain: "savuegram.firebaseapp.com",
-	databaseURL: "https://savuegram.firebaseio.com",
-	projectId: "savuegram",
-	storageBucket: "savuegram.appspot.com",
-	messagingSenderId: "478655614065"
+	apiKey: "",
+	authDomain: "",
+	databaseURL: "",
+	projectId: "",
+	storageBucket: "",
+	messagingSenderId: ""
 }
 firebase.initializeApp(config)
 
