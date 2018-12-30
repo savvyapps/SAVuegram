@@ -8,7 +8,7 @@ Vue.use(Vuex)
 fb.auth.onAuthStateChanged(user => {
     if (user) {
         store.commit('setCurrentUser', user)
-        store.dispatch('fetchUserProfile')
+        store.dispatch('setUserProfile')
 
         fb.usersCollection.doc(user.uid).onSnapshot(doc => {
             store.commit('setUserProfile', doc.data())
