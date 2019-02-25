@@ -123,8 +123,8 @@
             login() {
                 this.performingRequest = true
 
-                fb.auth.signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password).then(user => {
-                    this.$store.commit('setCurrentUser', user)
+                fb.auth.signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password).then(res => {
+                    this.$store.commit('setCurrentUser', res.user)
                     this.$store.dispatch('fetchUserProfile')
                     this.performingRequest = false
                     this.$router.push('/dashboard')
@@ -137,11 +137,11 @@
             signup() {
                 this.performingRequest = true
 
-                fb.auth.createUserWithEmailAndPassword(this.signupForm.email, this.signupForm.password).then(user => {
-                    this.$store.commit('setCurrentUser', user)
+                fb.auth.createUserWithEmailAndPassword(this.signupForm.email, this.signupForm.password).then(res => {
+                    this.$store.commit('setCurrentUser', res.user)
 
                     // create user obj
-                    fb.usersCollection.doc(user.uid).set({
+                    fb.usersCollection.doc(res.user.uid).set({
                         name: this.signupForm.name,
                         title: this.signupForm.title
                     }).then(() => {
