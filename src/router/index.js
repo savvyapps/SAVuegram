@@ -18,7 +18,10 @@ const router = new Router({
 		{
 			path: '/login',
 			name: 'Login',
-			component: Login
+			component: Login,
+		    meta: {
+                logi: true
+            }
 		},
         {
 			path: '/dashboard',
@@ -42,12 +45,15 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
     const requiresAuth = to.matched.some(x => x.meta.requiresAuth)
     const currentUser = firebase.auth().currentUser
+	const logi = to.matched.some(x => x.meta.logi)
 
     if (requiresAuth && !currentUser) {
         next('/login')
     } else if (requiresAuth && currentUser) {
         next()
-    } else {
+    } else if (logi && currentUser) {
+        next('/dashboard')
+   } else {
         next()
     }
 })
