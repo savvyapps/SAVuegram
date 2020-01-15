@@ -1,16 +1,21 @@
 import firebase from 'firebase'
 import 'firebase/firestore'
+import "firebase/analytics"
+
 
 // firebase init goes here
 const config = {
-	apiKey: "",
-	authDomain: "",
-	databaseURL: "",
-	projectId: "",
-	storageBucket: "",
-	messagingSenderId: ""
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 }
 firebase.initializeApp(config)
+firebase.analytics()
 
 // firebase utils
 const db = firebase.firestore()
@@ -19,7 +24,7 @@ const currentUser = auth.currentUser
 
 // date issue fix according to firebase
 const settings = {
-    timestampsInSnapshots: true
+    // timestampsInSnapshots: true
 }
 db.settings(settings)
 
