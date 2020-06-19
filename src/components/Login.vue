@@ -123,6 +123,9 @@
             login() {
                 this.performingRequest = true
 
+                // on v5 or later of the Firebase SDK, use:
+				// fb.auth.signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password).then(credentials => {
+                //    let user = credentials.user
                 fb.auth.signInWithEmailAndPassword(this.loginForm.email, this.loginForm.password).then(user => {
                     this.$store.commit('setCurrentUser', user)
                     this.$store.dispatch('fetchUserProfile')
