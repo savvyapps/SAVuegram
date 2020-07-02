@@ -1,6 +1,5 @@
 // imports
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-
 // colors
 $primary: #30A0EE;
 $error: #ef5777;
@@ -9,6 +8,7 @@ $light: #F5F8FA;
 $medium: #657786;
 $dark: #34495E;
 $white: #fff;
+
 // resets
 body {
 	margin: 0;
@@ -30,6 +30,7 @@ html {
 		outline: none;
 	}
 }
+
 // fonts
 h1,
 h2,
@@ -81,7 +82,6 @@ section {
 	display: flex;
 	max-width: 1200px;
 	margin: 0 auto;
-
 	@media screen and (max-width: 742px) {
 		display: block;
 	}
@@ -92,13 +92,12 @@ section {
 	flex-grow: 1;
 	flex-basis: 0;
 	padding: 1rem;
-
-	@media screen and (max-width: 742px) {
-
-	}
+	@media screen and (max-width: 742px) {}
 }
 
-[v-cloak] {display: none}
+[v-cloak] {
+	display: none;
+}
 
 .loading {
 	position: fixed;
@@ -114,7 +113,7 @@ section {
 		width: 150px;
 		text-align: center;
 		margin: 40vh auto 0;
-        padding: 40px 0;
+		padding: 40px 0;
 		border-radius: 3px;
 		box-shadow: 0 0 20px 0 rgba($dark, 0.5);
 	}
@@ -123,6 +122,7 @@ section {
 .error-msg {
 	margin-top: 1rem;
 	text-align: center;
+
 	p {
 		color: $error;
 		margin: 0;
@@ -143,13 +143,14 @@ section {
 	&:hover {
 		background: lighten($primary, 5%);
 	}
-    &:disabled {
-        opacity: 0.5;
 
-        &:hover {
-            background: $primary;
-        }
-    }
+	&:disabled {
+		opacity: 0.5;
+
+		&:hover {
+			background: $primary;
+		}
+	}
 }
 
 .text-center {
@@ -167,7 +168,7 @@ section {
 }
 
 .clear {
-    clear: both;
+	clear: both;
 }
 
 form {
@@ -192,20 +193,22 @@ form {
 		}
 	}
 
-    textarea {
-        resize: none;
-        border: 1px solid #e6ecf0;
-        outline: 0;
-        height: 100px;
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-    }
+	textarea {
+		resize: none;
+		border: 1px solid #e6ecf0;
+		outline: 0;
+		height: 100px;
+		width: 100%;
+		padding: 10px;
+		font-size: 16px;
+	}
 }
 // transitions
+
 .fade-enter-active {
 	transition: opacity 0.5s;
 }
+
 .fade-leave-active {
 	transition: opacity 0s;
 }
