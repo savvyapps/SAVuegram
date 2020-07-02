@@ -2,6 +2,20 @@
 
 > A simple social media web app built with Vue.js and Firebase's Cloud Firestore as a way to teach people how to build a real-world app using the two technologies. Follow along with our tutorial, [Building a Real-World Web App With Vue.js and Firebase](http://savvyapps.com/blog/definitive-guide-building-web-app-vuejs-firebase), to learn core Vue.js concepts and build this project.
 
+### Changelog
+*We just released a major update in July 2020!* This release includes the current Vue CLI, async/await instead of promise chaining, and a structure overhaul incorporating updated best practices. The flow remains unchanged with some updates to match the current Firebase SDK. All code for the rewrite can be found in the project's `master` branch, while the old code remains in `original-deprecated` for posterity.
+
+Changelog:
+
+* Complete rewrite of existing project
+* Async/Await instead of promise chaining
+* More components vs. same file functionality
+* Leveraging more actions vs. in-component requests to handle Firebase methods
+* Simplified Firebase integration
+
+
+
+
 ### Project Overview
 
 > In building this project, you'll learn how to:
@@ -33,7 +47,7 @@ npm run dev
 ### License
 
 ```
-Copyright 2018 Savvy Apps
+Copyright 2020 Savvy Apps
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
