@@ -59,7 +59,7 @@ export default {
   components: {
     PasswordReset
   },
-  data() {
+  data () {
     return {
       loginForm: {
         email: '',
